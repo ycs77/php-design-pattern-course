@@ -1,0 +1,16 @@
+language: php
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+
+install:
+  - travis_retry composer install --prefer-dist --no-interaction --no-suggest
+
+script:
+  - vendor/bin/phpunit

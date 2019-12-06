@@ -1,5 +1,8 @@
 # PHP 設計模式 練習
 
+[![CI Build Status][ico-ci]][link-ci]
+[![Style CI Build Status][ico-style-ci]][link-style-ci]
+
 * Strategy Pattern - 策略模式
 * Factory Pattern - 工廠模式
 * Adapter Pattern - 轉接器模式
@@ -12,3 +15,9 @@
 * Repository
 * Transformer
 * Presenter
+
+[ico-ci]: https://img.shields.io/travis/ycs77/php-design-pattern-course?style=flat-square
+[ico-style-ci]: https://github.styleci.io/repos/226114464/shield?style=flat-square
+
+[link-ci]: https://travis-ci.org/ycs77/php-design-pattern-course
+[link-style-ci]: https://github.styleci.io/repos/226114464
