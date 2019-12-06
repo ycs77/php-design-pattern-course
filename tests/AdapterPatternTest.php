@@ -11,8 +11,11 @@ class AdapterPatternTest extends TestCase
 {
     public function testCheckout()
     {
+        /** @var \Mockery\MockInterface|\Mockery\LegacyMockInterface $cashFlow */
         $cashFlow = m::mock(CashFlow::class);
-        $cashFlow->shouldReceive('deduction')->with(100);
+        $cashFlow->shouldReceive('deduction')
+            ->with(100)
+            ->once();
 
         $cart = new Cart($cashFlow);
         $cart->setTotal(100);
