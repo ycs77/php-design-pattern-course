@@ -1,10 +1,10 @@
 <?php
 
-namespace Ycs77\DesignPattern\AdapterPattern;
+namespace Ycs77\DesignPattern;
 
 class Cart
 {
-    /** @var \Ycs77\DesignPattern\AdapterPattern\CashFlow */
+    /** @var \Ycs77\DesignPattern\CashFlow */
     protected $cashFlow;
 
     /** @var int */

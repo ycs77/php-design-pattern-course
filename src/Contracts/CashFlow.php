@@ -1,6 +1,6 @@
 <?php
 
-namespace Ycs77\DesignPattern\AdapterPattern;
+namespace Ycs77\DesignPattern\Contracts;
 
 interface CashFlow
 {

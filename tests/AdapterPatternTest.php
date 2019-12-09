@@ -4,8 +4,8 @@ namespace Ycs77\DesignPattern\Test;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
-use Ycs77\DesignPattern\AdapterPattern\Cart;
-use Ycs77\DesignPattern\AdapterPattern\CashFlow;
+use Ycs77\DesignPattern\Cart;
+use Ycs77\DesignPattern\CashFlow;
 
 class AdapterPatternTest extends TestCase
 {
