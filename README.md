@@ -2,6 +2,7 @@
 
 [![CI Build Status][ico-ci]][link-ci]
 [![Style CI Build Status][ico-style-ci]][link-style-ci]
+[![Codecov Status][ico-codecov]][link-codecov]
 
 * Strategy Pattern - 策略模式
 * Factory Pattern - 工廠模式
@@ -18,6 +19,8 @@
 
 [ico-ci]: https://img.shields.io/travis/ycs77/php-design-pattern-course?style=flat-square
 [ico-style-ci]: https://github.styleci.io/repos/226114464/shield?style=flat-square
+[ico-codecov]: https://img.shields.io/codecov/c/github/ycs77/php-design-pattern-course?style=flat-square
 
 [link-ci]: https://travis-ci.org/ycs77/php-design-pattern-course
 [link-style-ci]: https://github.styleci.io/repos/226114464
+[link-codecov]: https://codecov.io/gh/ycs77/php-design-pattern-course
