@@ -112,51 +112,10 @@ class DecoratorPatternTest extends TestCase
     }
 
     /**
-     * 第2件6折 (限同商品).
-     */
-    public function testGetPercentOffSecondItemDiscountTotal()
-    {
-        $cart = new Cart($this->products, $this->cashFlow);
-
-        $cart->setProductDiscount(function ($price, $count) {
-            $discount = new ProductDiscount($price, $count);
-            $discount = new PercentOffSecondItemDiscount($discount, 0.6);
-
-            return $discount;
-        });
-
-        $cart->discount();
-
-        $this->assertEquals(2862, $cart->getTotal());
-    }
-
-    /**
-     * 買1送1 (限同商品).
-     */
-    public function testGetBuyXGetXDiscountTotal()
-    {
-        $cart = new Cart($this->products, $this->cashFlow);
-
-        $cart->setProductDiscount(function ($price, $count) {
-            $discount = new ProductDiscount($price, $count);
-            $discount = new BuyXGetXDiscount($discount, 1, 1);
-
-            return $discount;
-        });
-
-        $cart->discount();
-
-        $this->assertEquals(2209, $cart->getTotal());
-    }
-
-    /**
      * 組合折扣.
      *
      * (全部商品)
      * 打8折 + 萬聖節優惠 打9折 + 滿 800 優惠 50
-     * +
-     * (限同商品)
-     * 買2送1
      */
     public function testGetGroupDiscountTotal()
     {
@@ -167,13 +126,6 @@ class DecoratorPatternTest extends TestCase
             $discount = new PercentOffDiscount($discount, 0.8);
             $discount = new HalloweenDiscount($discount);
             $discount = new OverDiscount($discount, 800, 50);
-
-            return $discount;
-        });
-
-        $cart->setProductDiscount(function ($price, $count) {
-            $discount = new ProductDiscount($price, $count);
-            $discount = new BuyXGetXDiscount($discount, 2, 1);
 
             return $discount;
         });

@@ -40,50 +40,6 @@ class DecoratorPatternTest extends TestCase
     }
 
     /**
-     * 第2件6折 (限同商品).
-     */
-    public function testCalculatePercentOffSecondItemDiscountPrice()
-    {
-        $discount = new ProductDiscount(1000, 2);
-        $discount = new PercentOffSecondItemDiscount($discount, 0.6);
-
-        $this->assertEquals(1600, $discount->calculatePrice());
-    }
-
-    /**
-     * 第2件6折 買3件 (限同商品).
-     */
-    public function testCalculatePercentOffSecondItemDiscountPriceAndBuyThreeItems()
-    {
-        $discount = new ProductDiscount(1000, 3);
-        $discount = new PercentOffSecondItemDiscount($discount, 0.6);
-
-        $this->assertEquals(2600, $discount->calculatePrice());
-    }
-
-    /**
-     * 買1送1 (限同商品).
-     */
-    public function testCalculateBuyXGetXDiscountPrice()
-    {
-        $discount = new ProductDiscount(1000, 2);
-        $discount = new BuyXGetXDiscount($discount, 1, 1);
-
-        $this->assertEquals(1000, $discount->calculatePrice());
-    }
-
-    /**
-     * 買1送1 買3件 (限同商品).
-     */
-    public function testCalculateBuyXGetXDiscountPriceAndBuyThreeItems()
-    {
-        $discount = new ProductDiscount(1000, 3);
-        $discount = new BuyXGetXDiscount($discount, 1, 1);
-
-        $this->assertEquals(2000, $discount->calculatePrice());
-    }
-
-    /**
      * 組合折扣.
      *
      * (全部商品)
