@@ -6,6 +6,10 @@ use Mockery as m;
 use PHPUnit\Framework\TestCase;
 use Ycs77\DesignPattern\Cart;
 use Ycs77\DesignPattern\CashFlow;
+use Ycs77\DesignPattern\Discount\Discount;
+use Ycs77\DesignPattern\Discount\HalloweenDiscount;
+use Ycs77\DesignPattern\Discount\OverDiscount;
+use Ycs77\DesignPattern\Discount\PercentOffDiscount;
 use Ycs77\DesignPattern\Product;
 
 class DecoratorPatternTest extends TestCase
@@ -70,7 +74,7 @@ class DecoratorPatternTest extends TestCase
 
         $cart->discount();
 
-        $this->assertEquals(2309, $cart->getTotal());
+        $this->assertEquals(2309, $cart->getDiscountTotal());
     }
 
     /**
@@ -89,7 +93,7 @@ class DecoratorPatternTest extends TestCase
 
         $cart->discount();
 
-        $this->assertEquals(2209, $cart->getTotal());
+        $this->assertEquals(3198, $cart->getDiscountTotal());
     }
 
     /**
@@ -108,7 +112,7 @@ class DecoratorPatternTest extends TestCase
 
         $cart->discount();
 
-        $this->assertEquals(2968, $cart->getTotal());
+        $this->assertEquals(2968, $cart->getDiscountTotal());
     }
 
     /**
@@ -132,6 +136,6 @@ class DecoratorPatternTest extends TestCase
 
         $cart->discount();
 
-        $this->assertEquals(1540, $cart->getTotal());
+        $this->assertEquals(2324, $cart->getDiscountTotal());
     }
 }
