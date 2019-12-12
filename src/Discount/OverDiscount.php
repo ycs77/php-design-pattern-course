@@ -5,7 +5,7 @@ namespace Ycs77\DesignPattern\Discount;
 use Ycs77\DesignPattern\Contracts\Discount;
 
 /**
- * 滿 2000 優惠 100
+ * 滿 2000 優惠 100.
  */
 class OverDiscount implements Discount
 {

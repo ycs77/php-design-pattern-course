@@ -5,7 +5,7 @@ namespace Ycs77\DesignPattern\Discount;
 use Ycs77\DesignPattern\Contracts\Discount;
 
 /**
- * 打折
+ * 打折.
  */
 class PercentOffDiscount implements Discount
 {
