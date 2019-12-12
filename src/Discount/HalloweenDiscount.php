@@ -5,7 +5,7 @@ namespace Ycs77\DesignPattern\Discount;
 use Ycs77\DesignPattern\Contracts\Discount;
 
 /**
- * 萬聖節優惠 打9折
+ * 萬聖節優惠 打9折.
  */
 class HalloweenDiscount implements Discount
 {
