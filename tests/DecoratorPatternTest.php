@@ -3,6 +3,10 @@
 namespace Ycs77\DesignPattern\Test;
 
 use PHPUnit\Framework\TestCase;
+use Ycs77\DesignPattern\Discount\Discount;
+use Ycs77\DesignPattern\Discount\HalloweenDiscount;
+use Ycs77\DesignPattern\Discount\OverDiscount;
+use Ycs77\DesignPattern\Discount\PercentOffDiscount;
 
 class DecoratorPatternTest extends TestCase
 {
