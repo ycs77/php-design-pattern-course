@@ -17,7 +17,7 @@ class AdapterPatternTest extends TestCase
             ->with(100)
             ->once();
 
-        $cart = new Cart($cashFlow);
+        $cart = new Cart([], $cashFlow);
         $cart->setTotal(100);
         $cart->checkout();
     }
