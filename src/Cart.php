@@ -13,6 +13,9 @@ class Cart
     /** @var \Ycs77\DesignPattern\Contracts\Discount */
     protected $discount;
 
+    /** @var \Ycs77\DesignPattern\Contracts\ProductDiscount */
+    protected $productDiscount;
+
     /** @var int */
     protected $total = 0;
 
@@ -47,6 +50,11 @@ class Cart
     public function setDiscount(callable $callback)
     {
         $this->discount = $callback($this->total);
+    }
+
+    public function setProductDiscount(callable $callback)
+    {
+        $this->productDiscount = $callback($this->total);
     }
 
     public function discount()
