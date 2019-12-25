@@ -20,9 +20,9 @@ abstract class Handler
         return false;
     }
 
-    public function next(Handler $next = null): ?Handler
+    public function next(self $next = null): ?self
     {
-        if ($next instanceof Handler) {
+        if ($next instanceof self) {
             $this->next = $next;
         }
 
