@@ -33,6 +33,17 @@ class DecoratorPatternTest extends TestCase
     }
 
     /**
+     * 滿 2000 優惠 100, 但未達金額時就不計算優惠金額 (全部商品).
+     */
+    public function testCalculateOverDiscountPriceButAmountNotReached()
+    {
+        $discount = new Discount(1900);
+        $discount = new OverDiscount($discount, 2000, 100);
+
+        $this->assertEquals(1900, $discount->calculatePrice());
+    }
+
+    /**
      * 萬聖節優惠 打9折 (全部商品).
      */
     public function testCalculateHalloweenDiscountPrice()
